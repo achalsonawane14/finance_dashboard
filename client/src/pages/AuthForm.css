@@ -1,0 +1,76 @@
+/* AuthForm.css */
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #15192c, #1b1f32);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.auth-form {
+  background-color: #262b44;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 174, 0.1);
+  width: 100%;
+  max-width: 400px;
+  color: white;
+}
+
+.auth-form h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #00ffae;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.7rem 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #1b1f32;
+  color: white;
+  font-size: 1rem;
+}
+
+.auth-input::placeholder {
+  color: #cccccc;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #00ffae;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #10121c;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #00e69f;
+}
+
+.auth-toggle {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.toggle-link {
+  color: #00ffae;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 0.4rem;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+}

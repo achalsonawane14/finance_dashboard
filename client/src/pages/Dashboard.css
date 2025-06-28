@@ -1,0 +1,211 @@
+/* Dashboard CSS */
+
+/* Theme Variables */
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --card-bg: #ffffff;
+  --sidebar-bg: #2c3e50;
+  --sidebar-text: #ecf0f1;
+  --sidebar-active: #1abc9c;
+}
+
+.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #f1f1f1;
+  --card-bg: #2a2a2a;
+  --sidebar-bg: #111;
+  --sidebar-text: #bbb;
+  --sidebar-active: #16a085;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  width: 220px;
+  padding: 2rem 1rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 5px;
+}
+
+.sidebar-nav li:hover,
+.sidebar-nav .active {
+  background-color: var(--sidebar-active);
+  color: #fff;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Navbar */
+.top-navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-right: 2rem;
+  position: relative;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: auto;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 200px;
+}
+
+.notification-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Profile Section */
+.profile-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  background: var(--card-bg);
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+.profile-section:hover {
+  background: #e0e0e0;
+}
+
+.profile-img,
+.topbar-profile-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--sidebar-active);
+}
+
+.topbar-profile-img {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.topbar-profile-img:hover {
+  transform: scale(1.05);
+}
+
+.dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: var(--card-bg);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  min-width: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dropdown p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.dropdown button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background-color: var(--sidebar-active);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+/* Transactions */
+.transaction-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.transaction-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  gap: 1rem;
+}
+
+/* Chart Container */
+.chart-container {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* Filter Dropdown */
+.filter-container {
+  margin-bottom: 1rem;
+}
+
+/* Dark Mode Button */
+.dark-mode-btn {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background: var(--sidebar-active);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
